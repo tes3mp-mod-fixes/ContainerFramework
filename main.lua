@@ -414,7 +414,7 @@ function ContainerFramework.unloadStorageCell()
 end
 
 
-function ContainerFramework.OnServerPostInit()
+function ContainerFramework.OnServerPostInit(eventStatus)
 	if not ContainerFramework.checkConfig() then
 		return
 	end
@@ -422,7 +422,7 @@ function ContainerFramework.OnServerPostInit()
 	ContainerFramework.loadStorageCell()
 end
 
-function ContainerFramework.OnServerExit()
+function ContainerFramework.OnServerExit(eventStatus)
 	ContainerFramework.saveData()
 	ContainerFramework.unloadStorageCell()
 end
